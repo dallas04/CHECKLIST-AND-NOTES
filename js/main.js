@@ -36,8 +36,7 @@ function showTasksList() {
   list.reverse().forEach(task => {
     const element = String.raw`
 				<li class="ui segment grid equal width">
-					<div class="ui checkbox column">
-						<input type="checkbox" ${task.completed ? "checked" : ""}>
+					<div class="column">
 						<label>${task.text}</label>
 					</div>
 					<div class="column">
@@ -88,20 +87,6 @@ function addTask(event) {
   showTasksList()
 }
 
-// Change Complete State
-function completeTask(id) {
-  // Get Task
-  const taskIndex = list.findIndex(t => t.id == id)
-  const task = list[taskIndex]
-
-  // Change State
-  task.completed = !task.completed
-  list[taskIndex] = task
-
-  // Save Changes
-  localStorage.setItem("tasks", JSON.stringify(list))
-  showTasksList()
-}
 
 /**
  * Remove task
@@ -149,26 +134,6 @@ function clearAllTasks() {
   }).show()
 }
 
-// Clear Complete Tasks
-function clearCompleteTasks() {
-  if (list.length > 0) {
-    if (confirm("Are you sure?")) {
-      const filteredTasks = list.filter(t => t.completed !== true)
-      localStorage.setItem("tasks", JSON.stringify(filteredTasks))
-      return showTasksList()
-    }
-  }
-
-  Toastify({
-    text: "There is no task to remove",
-    duration: 3000,
-    close: true,
-    gravity: "bottom",
-    position: "left",
-    backgroundColor: "linear-gradient(to right, #e45757, #d44747)",
-    stopOnFocus: true,
-  }).showToast()
-}
 
 // Show Edit Modal And Pass Data
 function showEditModal(id) {
