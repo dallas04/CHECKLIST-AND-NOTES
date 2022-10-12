@@ -1,9 +1,9 @@
 /* Variables */
 :root {
 	--dark: #1b1c1d;
-	--blue: #2185d0;
+	--yellow: #f9c977;
 	--green: #1ebc30;
-	--red: #db2828;
+	--red: #ff1616;
 	--white: #ffffff;
 	--gray: #babac0;
 	--secondary: #fbfdff;
@@ -40,8 +40,8 @@ body::-webkit-scrollbar-thumb {
 
 /* Header */
 .main-header {
-	color: var(--white);
-	background: var(--blue);
+	color: var(--red);
+	background: var(--yellow);
 	padding: 1.5rem 0;
 	text-align: center;
 }
