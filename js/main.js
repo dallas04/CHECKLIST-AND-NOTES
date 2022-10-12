@@ -87,7 +87,6 @@ function addTask(event) {
   showTasksList()
 }
 
-
 /**
  * Remove task
  */
@@ -133,7 +132,6 @@ function clearAllTasks() {
     theme: "metroui",
   }).show()
 }
-
 
 // Show Edit Modal And Pass Data
 function showEditModal(id) {
