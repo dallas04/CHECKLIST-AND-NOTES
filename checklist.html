@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="checklist.css" />
+    <title>CHECKLISTS</title>
+  </head>
+  <body>
+    <a href="index.html"><button class="home" id="home">Home</button></a>
+    <a href="notes.html"><button class="notes" id="notes">Notes</button></a>
+    <h1>CHECKLISTS</h1>
+    <form id="form">
+      <input
+        type="text"
+        class="input"
+        id="input"
+        placeholder="Enter your checklist item"
+        autocomplete="off"
+      />
+
+      <ul class="todos" id="todos"></ul>
+    </form>
+    <small>
+      Left click to toggle completed.<br />
+      Right click to delete checklist item.
+    </small>
+
+    <script src="checklist.js"></script>
+  </body>
+</html>
